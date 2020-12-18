@@ -1,0 +1,12 @@
+name: All Branches
+
+on:
+  push:
+    branches: *
+    
+jobs:
+  runs-on: unbuntu-latest
+  
+  echo:  
+    steps:
+      - runs: echo 'hi'

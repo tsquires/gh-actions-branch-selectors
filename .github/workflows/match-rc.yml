@@ -1,0 +1,12 @@
+name: All Branches
+
+on:
+  push:
+    branches: 
+      - '**rc-?'
+    
+jobs:  
+  echo:  
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'hi'

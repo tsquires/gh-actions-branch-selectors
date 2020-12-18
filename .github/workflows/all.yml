@@ -2,11 +2,11 @@ name: All Branches
 
 on:
   push:
-    branches: *
+    branches: 
+      - '*'
     
-jobs:
-  runs-on: unbuntu-latest
-  
+jobs:  
   echo:  
+    runs-on: unbuntu-latest
     steps:
-      - runs: echo 'hi'
+      - run: echo 'hi'

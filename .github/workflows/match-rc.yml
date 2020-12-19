@@ -1,4 +1,4 @@
-name: All Branches
+name: RC Branches
 
 on:
   push:

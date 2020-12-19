@@ -3,7 +3,7 @@ name: Feature Branches
 on:
   push:
     branches: 
-      - '**feature-[12]'
+      - '**feature-[1-2]'
     
 jobs:  
   echo:  

@@ -3,7 +3,7 @@ name: All Branches
 on:
   push:
     branches: 
-      - '*'
+      - '**'
     
 jobs:  
   echo:  

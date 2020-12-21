@@ -3,7 +3,7 @@ name: RC Branches
 on:
   push:
     branches: 
-      - '**rc-[1-2]'
+      - '**/rc-[1-2]'
     
 jobs:  
   echo:  

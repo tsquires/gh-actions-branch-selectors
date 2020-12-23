@@ -1,0 +1,25 @@
+name: PR Review Requested
+
+on:
+  pull_request:
+    types: [review_requested]
+
+env:
+  # GITHUB_BRANCH: ${{ github.ref }}
+  GITHUB_SOURCE: ${{ github.pull_request.head.ref }}
+  GITHUB_TARGET: ${{ github.pull_request.base.ref }}
+  PR_TO_DEVELOP: ${ GITHUB_TARGET } == 'refs/heads/develop'
+
+jobs:
+  hi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hi
+        run: echo 'hi'
+
+  hi-main:
+    if: ${ PR_TO_DEVELOP }
+    runs-on: ubuntu-latest
+    steps:
+      - name: hi main
+        run: echo 'hi main'

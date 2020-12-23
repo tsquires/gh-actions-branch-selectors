@@ -1,8 +1,8 @@
-name: PR Review Requested
+name: PR opened / edited
 
 on:
   pull_request:
-    types: [review_requested]
+    types: [opened, edited]
 
 env:
   # GITHUB_BRANCH: ${{ github.ref }}

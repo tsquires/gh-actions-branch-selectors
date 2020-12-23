@@ -32,5 +32,5 @@ jobs:
       - name: hi main
         run: |
           echo 'hi main'
-          echo "::debug::${{ steps.extract_branch.output.source }}"
-          echo "::debug::${{ steps.extract_branch.output.target }}"
+          echo "::debug::${{ GITHUB_HEAD_REF }}"
+          echo "::debug::${{ GITHUB_BASE_REF }}"

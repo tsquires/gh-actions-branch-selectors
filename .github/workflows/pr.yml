@@ -19,7 +19,7 @@ jobs:
         run: echo 'hi'
 
   hi-main:
-    if: ${ GITHUB_HEAD_REF } == 'refs/heads/develop'
+    if: ${{ env.GITHUB_HEAD_REF }} == 'refs/heads/develop'
     runs-on: ubuntu-latest
     steps:
       - name: hi main

@@ -19,8 +19,17 @@ jobs:
         run: echo 'hi'
 
   hi-main:
-    if: ${{ github.pull_request.head.ref }} == 'refs/heads/develop'
+    # if: ${{ github.pull_request.head.ref }} == 'refs/heads/develop'
     runs-on: ubuntu-latest
     steps:
+      - name: Extract branch name
+        shell: bash
+        run: |
+          echo "##[set-output name=source;]$(echo ${GITHUB_HEAD_REF##*/})"
+          echo "##[set-output name=target;]$(echo ${GITHUB_BASE_REF##*/})"
+        id: extract_branch
+      
       - name: hi main
-        run: echo 'hi main'
+        run: |
+          echo 'hi main'
+          echo 'hi again'

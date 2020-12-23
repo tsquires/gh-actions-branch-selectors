@@ -25,8 +25,8 @@ jobs:
       - name: Extract branch name
         shell: bash
         run: |
-          echo "##[set-output name=source;]$(echo ${GITHUB_HEAD_REF##*/})"
-          echo "##[set-output name=target;]$(echo ${GITHUB_BASE_REF##*/})"
+          echo "##[set-output name=source;]$(echo ${GITHUB_HEAD_REF})"
+          echo "##[set-output name=target;]$(echo ${GITHUB_BASE_REF})"
         id: extract_branch
       
       - name: hi main

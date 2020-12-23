@@ -2,7 +2,7 @@ name: PR opened / edited
 
 on:
   pull_request:
-    types: [opened, edited]
+    types: [opened, synchronize, edited]
 
 # env:
   # GITHUB_BRANCH: ${{ github.ref }}

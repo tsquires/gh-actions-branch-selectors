@@ -33,5 +33,5 @@ jobs:
       - name: hi main
         run: |
           echo 'hi main'
-          # echo "::debug::${{ GITHUB_HEAD_REF }}"
-          # echo "::debug::${{ GITHUB_BASE_REF }}"
+          # echo "::debug::${ GITHUB_HEAD_REF }"
+          # echo "::debug::${ GITHUB_BASE_REF }"

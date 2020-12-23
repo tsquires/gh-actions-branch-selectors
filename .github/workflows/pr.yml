@@ -9,7 +9,7 @@ env:
   GITHUB_SOURCE: ${{ github.pull_request.head.ref }}
   GITHUB_TARGET: ${{ github.pull_request.base.ref }}
   # PR_TO_DEVELOP: ${ GITHUB_TARGET } == 'refs/heads/develop'
-  PR_TO_DEVELOP: ${{ env.GITHUB_TARGET }} == 'refs/heads/develop'
+  # PR_TO_DEVELOP: ${{ env.GITHUB_TARGET }} == 'refs/heads/develop'
 
 jobs:
   hi:
@@ -19,7 +19,7 @@ jobs:
         run: echo 'hi'
 
   hi-main:
-    if: ${{ PR_TO_DEVELOP }}
+    if: ${{ GITHUB_TARGET }} == 'refs/heads/develop'
     runs-on: ubuntu-latest
     steps:
       - name: hi main

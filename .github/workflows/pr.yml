@@ -2,6 +2,7 @@ name: PR opened / edited
 
 on:
   pull_request:
+    branches: main
     types: [opened, synchronize, edited]
 
 # env:
@@ -32,5 +33,5 @@ jobs:
       - name: hi main
         run: |
           echo 'hi main'
-          echo "::debug::${{ GITHUB_HEAD_REF }}"
-          echo "::debug::${{ GITHUB_BASE_REF }}"
+          # echo "::debug::${{ GITHUB_HEAD_REF }}"
+          # echo "::debug::${{ GITHUB_BASE_REF }}"
